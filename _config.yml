@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Kalkondi"
+title                    : "काळकोंडी"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "One of the Great village"
@@ -80,10 +80,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Kalkondi"
+  name             : "काळकोंडी"
   avatar           : "profile.jpeg"
-  bio              : "Beside Namdeo Maharaj's Birth place"
-  location         : "At Kalkondi, Post Narsi, Ta & Dist Hingoli"
+  bio              : "नामदेव महाराजांच्या जन्मस्थानाच्या बाजूला"
+  location         : "काळकोंडी, पोस्ट नरसी, ता. जि. हिंगोली"
   employer         :
   pubmed           :
   googlescholar    :
