@@ -14,6 +14,34 @@ layout: default
   {% endunless %}
 {% endif %}
 
+<script>
+function triggerGitAutomation() {
+    const url = 'https://git-client-automation-fd017bcfd77c.herokuapp.com/process';
+
+    const data = {
+        title: 'title from button click',
+        description: 'some new description from button click'
+    };
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        alert('Git automation triggered successfully!');
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('Error triggering Git automation.');
+    });
+}
+</script>
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -51,7 +79,6 @@ layout: default
     
         </header>
       {% endunless %}
-
       <section class="page__content" itemprop="text">
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
@@ -74,6 +101,7 @@ layout: default
     {% endif %}
   </article>
 
+  <button onclick="triggerGitAutomation()">Trigger Git Automation</button>
   {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
